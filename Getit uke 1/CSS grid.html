@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        div.page{
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 60px 5fr;
+            grid-template-rows: 40px 6fr 40px;
+            grid-template-areas:'menu header'
+                                'menu maincontent'
+                                'footer footer';
+        }
+        div.footer{
+            background-color:red;
+            grid-area:footer;
+        }
+        div.header{
+            background-color:blue;
+            grid-area: header;
+        }
+        div.maincontent{
+            background-color:yellow;
+            grid-area: maincontent;
+        }
+        div.menu{
+            background-color:green;
+            grid-area: menu;
+        }
+
+    @media only screen and (max-width: 600px){
+        div.page{
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 40px 1fr 6fr 40px;
+            grid-template-areas:'header'
+                                'menu'
+                                'maincontent'
+                                'footer';
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">Header</div>
+        <div class="menu">Menu</div>
+        <div class="maincontent">MainContent</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
