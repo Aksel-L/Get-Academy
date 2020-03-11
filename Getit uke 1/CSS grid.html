@@ -13,7 +13,7 @@
             height: 100vh;
             display: grid;
             grid-template-columns: 60px 5fr;
-            grid-template-rows: 40px 6fr 40px;
+            grid-template-rows: 1fr 2fr 40px;
             grid-template-areas:'menu header'
                                 'menu maincontent'
                                 'footer footer';
@@ -41,10 +41,9 @@
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 40px 1fr 6fr 40px;
-            grid-template-areas:'header'
-                                'menu'
-                                'maincontent'
-                                'footer';
+            grid-template-areas:'header maincontent'
+                                'menu footer';
+                                
         }
     }
     </style>
