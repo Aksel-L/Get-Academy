@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body onload="testOnLoad()">
+    <p>Java 2a ting</p>
+    <input type="text" onchange="testOnChange()" oninput="testOnInput()" />
+    <h3 onmouseover="testOnMouseOver()" onmouseout="testOnMouseOut()"> 3*test</h3>
+    <h2 id="info"></h2>
+
+    <img src="https://media1.giphy.com/media/LW5vBvAb48Oe9OoEKT/source.gif" />
+
+    <a href="https://sohu-shop.no/images/tapet_new/lion-modern-light-painting-photo-wallpaper-wall-mural-3633wm-2-p.jpg">Bilde trykk her</a>
+
+    <script>
+        function testOnLoad() {
+            document.getElementById('info').innerHTML += '<li>onLoad</li>';
+        }
+
+        function testOnChange() {
+            document.getElementById('info').innerHTML += '<li>onChange/li>';
+        }
+
+        function testOnInput() {
+            document.getElementById('info').innerHTML += '<li>onInput</li>';
+        }
+
+        function testOnMouseOver() {
+            document.getElementById('info').innerHTML += '<li>onMouseOver</li>';
+        }
+
+        function testOnMouseOut() {
+            document.getElementById('info').innerHTML += '<li>onMouseOut</li>';
+        }
+    </script>
+</body>
+</html>
