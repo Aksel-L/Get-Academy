@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onmouseover="endre(this)" onmouseout="tilbake(this)"><table><tr><td>o</td><td>o</td></tr><tr><td>o</td><td>o</td></tr></table></h1>
+    <h1 onmouseover="endre(this)" onmouseout="tilbake(this)"><table><tr><td>o</td><td>o</td></tr><tr><td>o</td><td>o</td></tr></table></h1>
+    <h1 onmouseover="endre(this)" onmouseout="tilbake(this)"><table><tr><td>o</td><td>o</td></tr><tr><td>o</td><td>o</td></tr></table></h1>
+    <h1 onmouseover="endre(this)" onmouseout="tilbake(this)"><table><tr><td>o</td><td>o</td></tr><tr><td>o</td><td>o</td></tr></table></h1>
+
+
+    <script>
+        function endre(x) {
+            x.innerHTML= "<table><tr><td>x</td><td>x</td></tr><tr><td>x</td><td>x</td></tr></table>";
+            console.log('mouseOver')
+        }
+
+        function tilbake(o) {
+            o.innerHTML= "<table><tr><td>o</td><td>o</td></tr><tr><td>o</td><td>o</td></tr></table>";
+            console.log('mouseout');
+        }
+    </script>
+
+</body>
+</html>

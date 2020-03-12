@@ -7,33 +7,37 @@
 </head>
 <body onload="testOnLoad()">
     <p>Java 2a ting</p>
-    <input type="text" onchange="testOnChange()" oninput="testOnInput()" />
+    <input type="text" ondblclick="testOnChange()" oninput="testOnInput()" />
     <h3 onmouseover="testOnMouseOver()" onmouseout="testOnMouseOut()"> 3*test</h3>
-    <h2 id="info"></h2>
+
+    <h2 id="info">a</h2>
 
     <img src="https://media1.giphy.com/media/LW5vBvAb48Oe9OoEKT/source.gif" />
 
     <a href="https://sohu-shop.no/images/tapet_new/lion-modern-light-painting-photo-wallpaper-wall-mural-3633wm-2-p.jpg">Bilde trykk her</a>
 
+    
+
     <script>
+
         function testOnLoad() {
             document.getElementById('info').innerHTML += '<li>onLoad</li>';
         }
 
         function testOnChange() {
-            document.getElementById('info').innerHTML += '<li>onChange/li>';
+           console.log('dblclick');
         }
 
         function testOnInput() {
-            document.getElementById('info').innerHTML += '<li>onInput</li>';
+            console.log('onInput');
         }
 
         function testOnMouseOver() {
-            document.getElementById('info').innerHTML += '<li>onMouseOver</li>';
+            console.log('onMouseOver');
         }
 
         function testOnMouseOut() {
-            document.getElementById('info').innerHTML += '<li>onMouseOut</li>';
+            console.log('onMouseOut');
         }
     </script>
 </body>
