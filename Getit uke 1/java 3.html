@@ -7,24 +7,51 @@
     <title></title>
 </head>
 <body>
-    <p>Ferdighet 3 - spesialtilfelle, this og gjøre noe med det elementet man trykker på (eller som utløser eventet)</p>
-    Samenlign dette eksempelet med "Ferdighet 2 - Onclick - kjøre funksjon som endrer innerHTML ut fra Id"!
-    <h2 id="z" onclick="doSomething(this)">AAAAAAAAAAAAAAAA</h2>
-    <h2 id="y" onclick="doSomething(this)">BBBBBBBBBBBBBBBB</h2>
+        <table id="myTable">
+            <tbody>
+                <tr>
+                    <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                    <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                    <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                    <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                    <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                    <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                    <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                    <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                    <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                    <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                </tr>
+            </tbody>
 
-    <hr />
-
-    <table><tr><td>'o'</td><td>o</td></tr><tr><td>o</td><td>o</td></tr></table>
+            <tbody>
+                <tr>
+                    <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                    <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                    <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                    <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                </tr>
+            </tbody>
+        </table>
 
     <script>
-function doSomething(etNavnDuVelgerSelv) {
-            // Nå er etNavnDuVelgerSelv det samme som om vi hadde kjørt:
-            // var etNavnDuVelgerSelv = document.getElementById('z');
-            // eller
-            // var etNavnDuVelgerSelv = document.getElementById('y');
-            // HVIS og bare hvis du trykker på akkurat det elementet som har id=z
-            etNavnDuVelgerSelv.innerHTML = 'CCCCCCCCCCCCCCCC';
-}
+        function changeStuff(nyttVarde) {
+            nyttVarde.innerHTML = 'X';
+        }
+        function changeback(oldValue) {
+            oldValue.innerHTML = 'O';
+        }
     </script>
+
+
 </body>
 </html>
