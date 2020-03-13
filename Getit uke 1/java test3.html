@@ -1,0 +1,63 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <table id="myTable">
+        <tbody>
+            <tr>
+                <td id="O1">O</td>
+                <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+            </tr>
+        </tbody>
+
+        <tbody>
+            <tr>
+                <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+                <td onmouseover="changeStuff(this)" onmouseout="changeback(this)">O</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+
+        function doSomething(test) {
+            var test = document.getElementById('O1');
+
+            test.innerHTML = 'X';
+        }
+        function changeStuff(nyttVarde) {
+            nyttVarde.innerHTML = 'X';
+        }
+        function changeback(oldValue) {
+            oldValue.innerHTML = 'O';
+        }
+    </script>
+
+
+</body>
+</html>
