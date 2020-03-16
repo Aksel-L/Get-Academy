@@ -6,10 +6,12 @@
     <title></title>
 
     <style>
-        h1{
-            color:forestgreen;
-            border-style: solid;
-            border-color: black;
+        .navn{
+            color:darkblue;
+            width: 300px;
+            border: 3px solid black;
+            font-size: 60px;
+            text-align: center;
             
         }
 
@@ -17,6 +19,7 @@
             border-style: solid;
             border-color: black;
             border-width: 5px;
+            width: 100px;
             background-color: inherit;
             padding: 20px 35px;
             font-size: 25px;
@@ -24,15 +27,25 @@
             display: inline-block;
             
         }
+        .tall{
+            color:forestgreen;
+            width: 300px;
+            height: 50px;
+            border: 3px solid black;
+            font-size: 45px;
+            text-align: center;
+
+        }
 
     </style>
+
+
 </head>
 
 <body>
-    <h1>    Kodelås</h1>
+    <div class="navn">Kodelås</div>
     <br />
-    <br />
-    <div id="clickedOn"></div>
+    <div class="tall" id="clickedOn"></div>
     <br />
     <button class="btn 1" onclick="log(this)">1</button>
     <button class="btn 1" onclick="log(this)">2</button>
@@ -49,27 +62,26 @@
     <button class="btn 1" onclick="log(this)">*</button>
     <button class="btn 1" onclick="log(this)">0</button>
     <button class="btn 1" onclick="log(this)">#</button>
-
-
-
+    <br />
+    <button class="btn 1" onclick="log(this)"></button>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <script>
         var logz = '';
 
         function log(collectNr) {
-            logz = collectNr.innerHTML + " ";
-
-            var x = document.getElementById("clickedOn").innerHTML += logz;
-            x.style.backgroundColor = 'red';
-
+            logz = collectNr.innerHTML;
+            document.getElementById("clickedOn").innerHTML += logz;
         }
-        //function log() {
-        //    var x = document.getElementsByClassName("btn 1");
-         //   var i;
-           // for (i = 0; i < x.length; i++) {
-             //   x[i].style.backgroundColor = "red";
-   //         }
-     //   }
+
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("div").empty();
+            });
+        });
     </script>
+
+    <button>Reset tallene</button>
 </body>
 </html>
