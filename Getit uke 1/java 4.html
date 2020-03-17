@@ -27,6 +27,19 @@
             display: inline-block;
             
         }
+        .fjern {
+            border-style: solid;
+            border-color: black;
+            border-width: 5px;
+            width: 308px;
+            background-color: inherit;
+            padding: 20px 35px;
+            font-size: 25px;
+            cursor: pointer;
+            display: inline-block;
+            
+        }
+
         .tall{
             color:forestgreen;
             width: 300px;
@@ -63,7 +76,6 @@
     <button class="btn 1" onclick="log(this)">0</button>
     <button class="btn 1" onclick="log(this)">#</button>
     <br />
-    <button class="btn 1" onclick="log(this)"></button>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -77,11 +89,11 @@
 
         $(document).ready(function () {
             $("#fjern").click(function () {
-                $("div").empty();
+                $("#clickedOn").empty();
             });
         });
     </script>
 
-    <button id="fjern">Reset tallene</button>
+    <button class="fjern" id="fjern">Reset tallene</button>
 </body>
 </html>
