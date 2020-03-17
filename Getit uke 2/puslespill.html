@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puslespill</title>
+
+    <style>
+        .top {
+            width: 150px;            
+            border: solid 3px;
+            border-color: black;
+        }
+        .bunn{
+            width: 150px;
+            border: solid 3px;
+            border-color: black;
+        }
+        .area {
+            width: 600px;
+            border-radius: 0px;
+            cursor: pointer;
+            padding: 0;
+            margin: 0;
+            word-spacing: 0px;
+        }
+        .fjern {
+            border-style: solid;
+            border-color: black;
+            border-width: 5px;
+            width: 200px;
+            background-color: inherit;
+            padding: 20px 35px;
+            font-size: 25px;
+            cursor: pointer;
+            display: inline-block;
+        }
+        
+    </style>
+
+</head>
+<body>
+    
+    <img class="top" id="pic1" src="1.jpg" onclick="flytte1()"/>
+    <img class="bunn" id="pic2" src="2.jpg" alt="error" onclick="flytte2()"/>
+   
+    <button class="fjern">Retry</button>
+        
+    <div class="area" id="combine"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        var counting = 0;
+
+            function flytte1() {
+            counting++;
+
+            if(counting <= 2){
+                document.getElementById('combine').innerHTML += '<img width="400" src="1.jpg"/>';
+            }
+            
+        }
+        function flytte2() {
+            counting++;
+
+            if(counting <= 2){
+                document.getElementById('combine').innerHTML += '<img width="400" src="2.jpg"/>';
+            } 
+            
+        }
+        $(document).ready(function () {
+            $(".fjern").click(function () {
+                $(".area").empty();
+                if(counting >= 2){
+                    counting = 0;
+                }
+            });
+        });
+
+
+    </script>
+</body>
+</html>
