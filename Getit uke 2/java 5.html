@@ -7,7 +7,7 @@
 </head>
 <body>
     <p>Ferdighet 6 - Sette sammen tekst av flere deler  og  bruke dette til å bygge HTML dynamisk</p>
-    <input id="border" type="checkbox" oninput="showDiv()"/>
+    Border on/off: <input value="solid" id="border" type="checkbox" />
     <input id="sizeSlider" type="range" min="100" max="500" step="10" oninput="showDiv()" />
     <br /><input id="textInput" type="text" oninput="showDiv()" value="endre teksten!" />
     <select id="colorChooser" onchange="showDiv()">
@@ -26,6 +26,8 @@
         var sizeSlider = document.getElementById('sizeSlider');
         var textInput = document.getElementById('textInput');
         var colorChooser = document.getElementById('colorChooser');
+        var border = document.getElementById('border')
+        var checkBox = document.getElementById('myCheck');
 
         showDiv();
 
@@ -34,6 +36,9 @@
                 + 'background-color: ' + colorChooser.value + ';'
                 + 'width: ' + sizeSlider.value + 'px;'
                 + 'height: ' + sizeSlider.value + 'px;'
+                + ' border-style: ' + border.value + ';'
+                + 'border: 20 px;'
+                + 'border-color: black;'
                 + '">' +
                 textInput.value + '</div>';
             resultatHtmlDiv.innerText = resultatDiv.innerHTML;
