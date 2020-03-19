@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <select id="colorChooser" onchange="showDiv()">
+        <option value="red">Red color</option>
+        <option selected value="green">Green color</option>
+        <option value="blue">Blue color</option>
+        <option value="black">Black color</option>
+        <option value="grey">Grey color</option>
+    </select>
+
+
+
+    <h1>Wordchooser</h1>
+
+    <div id="resultat"></div>
+
+    <script>
+
+        var resultatDiv = document.getElementById('resultat');
+
+        showDiv()
+
+        function showDiv(){
+
+        resultatDiv.innerHTML = '<div text="'
+        'Det var en gang en kone som hadde  syv sultne unger, <br>
+        ' og dem stekte hun pannekaker til. <br> '
+         'Det var råmelks-kake, den lå i pannen og este seg så tykk og god, <br>'
+        'og ungene sto omkring, og gamlefar satt og så på.'
+
+        '">'
+        </div>
+        }
+    </script>
+</body>
+</html>
