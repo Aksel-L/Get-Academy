@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>Ferdighet 9d - Valgsetninger - Sammenligne flere ting på en gang (og)</p>
+    <div id="info"></div> <br/>
+    <div id="nr2"></div> <br/>
+    <div id="nr3"></div>
+    <ul>
+        <li>Endre på tekstene!</li>
+        <li>Prøv også å fylle ut tall: 11, 101, 102</li>
+    </ul>
+    <input type="text" id="txt1" oninput="findFirst()" value="Per" /><br />
+    <input type="text" id="txt2" oninput="findFirst()" value="Pål" /><br />
+    <input type="text" id="txt3" oninput="findFirst()" value="Espen" /><br />
+    <script>
+        var infoDiv = document.getElementById('info');
+        var nr2Div = document.getElementById('nr2');
+        var nr3Div = document.getElementById('nr3');
+        var txtDiv1 = document.getElementById('txt1');
+        var txtDiv2 = document.getElementById('txt2');
+        var txtDiv3 = document.getElementById('txt3');
+        
+        findFirst();
+        
+        function findFirst() {
+            var txt1 = txtDiv1.value;
+            var txt2 = txtDiv2.value;
+            var txt3 = txtDiv3.value;
+
+            infoDiv.innerHTML = 'Om vi sorterer de tre tekstene, er denne den første:<br/>';
+            if (txt1 <= txt2 && txt1 <= txt3) infoDiv.innerHTML += txt1;
+            else if (txt2 <= txt3) infoDiv.innerHTML += txt2;
+            else infoDiv.innerHTML += txt3;
+
+            nr2Div.innerHTML = 'Nr2 er:<br/>';
+            if (txt1 <= txt2 && txt1 >= txt3) nr2Div.innerHTML += txt1;
+            else if (txt1 >= txt2 && txt1 <= txt3) nr2Div.innerHTML += txt1;
+            else if (txt2 <= txt3 && txt2 >= txt1) nr2Div.innerHTML += txt2;
+            else if (txt2 >= txt3 && txt2 <= txt1) nr2Div.innerHTML += txt2;
+            else nr2Div.innerHTML += txt3;
+
+            nr3Div.innerHTML = 'Nr3 er:<br/>';
+            if (txt1 >= txt2 && txt1 >= txt3) nr3Div.innerHTML += txt1;
+            else if (txt2 >= txt3) nr3Div.innerHTML += txt2;
+            else nr3Div.innerHTML += txt3;
+        }
+    </script>
+</body>
+</html>
