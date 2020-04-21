@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>Ferdighet 9e - Valgsetninger - Sammenligne flere ting på en gang (eller)</p>
+    <div id="info"></div>
+    <input id="a" type="checkbox" onchange="info()" />Checkbox A<br />
+    <input id="b" type="checkbox" onchange="info()" />Checkbox B<br />
+    <input id="c" type="checkbox" onchange="info()" />Checkbox C<br />
+    <input id="d" type="checkbox" onchange="info()" />Checkbox D<br />
+    <input id="e" type="checkbox" onchange="info()" />Checkbox E<br />
+    <ul>
+        <li>Trykk på checkboksene - velg alle, ingen og noen</li>
+        <li>Oppgave: Legg til én checkbox til og få det til å virke som før med alle fem.</li>
+    </ul>
+    <script>
+        var infoDiv = document.getElementById ('info');
+        var black = document.getElementById ('a');
+        var blue = document.getElementById ('b');
+        var grey = document.getElementById ('c');
+        var green = document.getElementById ('d');
+        var red = document.getElementById ('e');
+
+        info();
+
+        function info() {
+            var isCheckedBlack = black.checked;
+            var isCheckedBlue = blue.checked;
+            var isCheckedGrey = grey.checked;
+            var isCheckedGreen = green.checked;
+            var isCheckedRed = red.checked;
+
+            if (isCheckedBlack && isCheckedBlue && isCheckedGrey && isCheckedGreen && isCheckedRed) {
+                infoDiv.style.backgroundColor = "black";
+            } else if (isCheckedBlack && isCheckedBlue && isCheckedGrey && isCheckedGreen && isCheckedRed) {
+                infoDiv.style.backgroundColor = "green";
+            } else {
+                infoDiv.style.backgroundColor = "yellow";
+            }
+        }
+    </script>
+</body>
+</html>

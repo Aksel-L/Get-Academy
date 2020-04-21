@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="info"> skfsksk</div>
+    <input id="black" type="radio" name="background collors" onchange="info()"/>Svart   <br>
+    <input id="blue" type="radio" name="background collors" onchange="info()"/>Blå   <br>
+    <input id="grey" type="radio" name="background collors" onchange="info()"/> Grå  <br>
+    <input id="green" type="radio" name="background collors" onchange="info()"/>Grønn   <br>
+    <input id="red" type="radio" name="background collors" onchange="info()"/> Rød  <br>
+
+    <script>
+        var infoDiv = document.getElementById ('info');
+        var black = document.getElementById ('black');
+        var blue = document.getElementById ('blue');
+        var grey = document.getElementById ('grey');
+        var green = document.getElementById ('green');
+        var red = document.getElementById ('red');
+
+        info();
+
+        function info() {
+            var isCheckedBlack = black.checked;
+            var isCheckedBlue = blue.checked;
+            var isCheckedGrey = grey.checked;
+            var isCheckedGreen = green.checked;
+            var isCheckedRed = red.checked;
+
+            if (isCheckedBlack) {
+                infoDiv.style.backgroundColor = "black";
+            } else if (isCheckedBlue) {
+                infoDiv.style.backgroundColor = "blue";
+            } else if (isCheckedGrey) {
+                infoDiv.style.backgroundColor = "grey";
+            } else if (isCheckedGreen) {
+                infoDiv.style.backgroundColor = "green";
+            } else if (isCheckedRed) {
+                infoDiv.style.backgroundColor = "red";
+            }
+
+        }
+    </script>
+
+</body>
+</html>
