@@ -3,7 +3,8 @@ function isDateValid(date){
  return dateLength(date) &&
  datePeriods(date) &&
  dateYear(date) &&
- dateMonth(date);
+ dateMonth(date) &&
+ dateDay(date);
 }
 
 
@@ -44,9 +45,8 @@ function dateDay(date){
     else if (day ==='30' && month !== '02'){
         return true;
     }
-    else if(day === '31' && !monthShort){
+    else if(day === '31' && !monthShort && month !== '02'){
         return true;
     }
-    //else return false;
 
 }
