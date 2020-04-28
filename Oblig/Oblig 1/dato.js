@@ -32,21 +32,12 @@ function isLeapYear(date)
     return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
 }
 
-function dateDay(date){
-    let month = date.substr(3,2);
-    let monthShort = (month === '04'|| month === '06'|| month === '09'|| month === '11')
-    let day = date.substr(0,2);
-    if (day.length === 2 && day >= '01' && day <= '28'){
-        return true;
-    }
-    else if (day === '29' && (month !== '02' || isLeapYear(date))){
-        return true;
-    }
-    else if (day ==='30' && month !== '02'){
-        return true;
-    }
-    else if(day === '31' && !monthShort && month !== '02'){
-        return true;
-    }
-
+function dateDay(date) {
+    let month = date.substr(3, 2);
+    let monthShort = (month === '04' || month === '06' || month === '09' || month === '11')
+    let day = date.substr(0, 2);
+    return day.length === 2 && day >= '01' && day <= '28'
+        || day === '29' && (month !== '02' || isLeapYear(date))
+        || day === '30' && month !== '02'
+        || day === '31' && !monthShort && month !== '02';
 }
