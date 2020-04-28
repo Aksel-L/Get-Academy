@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>QUnit Example</title>
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.9.2.css">
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-2.9.2.js"></script>
+  <script src="dato.js"></script>
+
+
+  <script>
+
+    const date = '21.12.2020'
+    
+    QUnit.test("Dato", function (assert) {
+        const actual = isDateValid(date);
+        const expected = true;
+        assert.equal(actual, expected);
+    });
+
+    QUnit.test("Dato lengde", function (assert) {
+            const actual = dateLength(date);
+            const expected = true;
+            assert.equal(actual, expected);
+        });
+
+    QUnit.test("Dato punktum", function (assert) {
+            const actual = datePeriods(date);
+            const expected = true;
+            assert.equal(actual, expected);
+        });
+
+    QUnit.test("Dato år", function (assert) {
+            const actual = dateYear(date);
+            const expected = true;
+            assert.equal(actual, expected);
+        });        
+
+    QUnit.test("Dato måned", function (assert) {
+            const actual = dateMonth(date);
+            const expected = true;
+            assert.equal(actual, expected);
+        });   
+
+    QUnit.test("Dato skuddår", function (assert) {
+            const actual = isLeapYear(date);
+            const expected = true;
+            assert.equal(actual, expected);
+        });   
+
+    QUnit.test("Dato dag", function (assert) {
+            const actual = dateDay(date);
+            const expected = true;
+            assert.equal(actual, expected);
+        }); 
+        
+    QUnit.test("Dato dag 29 m/skuddår", function (assert) {
+            const actual = dateDay('29.02.2020');
+            const expected = true;
+            assert.equal(actual, expected);
+        });   
+
+    QUnit.test("Dato dag 29 u/skuddår", function (assert) {
+            const actual = dateDay('29.02.2019');
+            const expected = true;
+            assert.equal(actual, expected);
+        }); 
+        
+    QUnit.test("Dato dag 30 riktig måned", function (assert) {
+            const actual = dateDay('30.12.2020');
+            const expected = true;
+            assert.equal(actual, expected);
+        });   
+    
+    QUnit.test("Dato dag 30 feil måned", function (assert) {
+            const actual = dateDay('30.02.2020');
+            const expected = true;
+            assert.equal(actual, expected);
+        });   
+
+    QUnit.test("Dato dag 31 riktig måned", function (assert) {
+            const actual = dateDay('31.08.2020');
+            const expected = true;
+            assert.equal(actual, expected);
+        }); 
+        
+    QUnit.test("Dato dag 31 feil måned", function (assert) {
+            const actual = dateDay('31.06.2020');
+            const expected = true;
+            assert.equal(actual, expected);
+        });   
+
+  </script>
+  
+</body>
+</html>
