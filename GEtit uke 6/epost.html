@@ -30,7 +30,7 @@
 
         QUnit.test("Contains dots and spaces ", function (assert) {
             const actual = isEmail('spermh .val@gmail.com');
-            const expected = true
+            const expected = false;
             assert.equal(actual, expected);
         });
         QUnit.test("Contains dots", function (assert) {
