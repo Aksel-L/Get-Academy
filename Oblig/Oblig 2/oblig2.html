@@ -4,20 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="stylesheet.css">
+
 </head>
 <body>
-    <div id="content"></div>
+    <div id="content">
+    </div>
+    <script src="oblig2.js"></script>
     
     <script>
         // hjelpevariable for både view og controller
-        var contentDiv = document.getElementById('content');
+        let contentDiv = document.getElementById('content');
+        
+        let barInputValue;
+        let barClicked;
+        let barLastClicked;
+        let barNo;
+        let valgtStolpe;
+        let state;
+        let place;
 
         // model
-        let numbers = [7, 3, 1, 5, 8];
-        
-        
-    
+        let numbers = [8, 3, 6, 2, 4];
+
         // view
         show();
         function show() {
@@ -29,26 +37,26 @@
                 <svg id="chart" width="500" viewBox="0 0 80 60">
                     ${svgInnerHtml}
                 </svg><br/>
-                Valgt stolpe: <i id="whoIsChosenText">ingen</i>
+                Valgt stolpe: <i>${valgtStolpe || 'Ingen valgt'}</i>
                 <br />
                 Verdi:
-                <input type="number" min="1" max="10" />
-                <button>Legg til stolpe</button>
-                <button disabled>Endre valgt stolpe</button><br />
-                <button disabled>Fjerne valgt stolpe</button>
+                <input value="${barInputValue || ''}" oninput="barInputValue = this.value" type="number" min="1" max="10" />
+                <button onclick="createNewBar()">Legg til stolpe</button>
+                <button ${state || 'disabled'} onclick="changeBar()" >Endre valgt stolpe</button><br />
+                <button ${state || 'disabled'} onclick="removeBar()">Fjerne valgt stolpe</button>
                 `;
         }
     
         function createBar(number, barNo) {
-            
             const width = 8;
             const spacing = 2;
             let x = (barNo - 1) * (width + spacing);
             let height = number * 10;
             let y = 60 - height;
             let color = calcColor(1, 10, barNo);
-            return `<rect id="bar${barNo}" width="${width}" height="${height}"
-                    x="${x}" y="${y}" fill="${color}" onclick="choosery(${number},${barNo})"></rect>`;
+            let barStyleSheet = place == barNo ? 'stroke: black; stroke-width: 0.5;':'';
+            return `<rect onclick="selectedBar(${barNo})" width="${width}" height="${height}"
+                    x="${x}" y="${y}" fill="${color}" style="${barStyleSheet}"></rect>`;
         }
     
         function calcColor(min, max, val) {
@@ -57,18 +65,10 @@
             var colString = "hsl(" + ((curPercent * (maxHue - minHue)) + minHue) + ",100%,50%)";
             return colString;
         }
-
-        function choosery(number, barNo) {
-            var bar = document.getElementById('bar' + barNo)
-            bar.classList.toggle("selected"); 
-            console.log(bar);
-            document.getElementById('whoIsChosenText').innerHTML = number;
-        }
-
-       
-        
     
-        // controller (ingenting her ennå)
+        // controller (ingenting her ennå)     
+        
+
     </script>
 </body>
 </html>
