@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
 <body>
     <div id="content">
@@ -11,14 +12,19 @@
     
     <script>
         // hjelpevariable for både view og controller
-        var contentDiv = document.getElementById('content');
-    
-        // model
-        let numbers = [8, 3, 3, 5, 8, 10];
-        let svgAll = document.getElementsByClassName("svgBar");
+        let contentDiv = document.getElementById('content');
+        
         let barInputValue;
-        let border = "null";
-    
+        let barClicked;
+        let barLastClicked;
+        let barNo;
+        let valgtStolpe;
+        let state;
+        let place;
+
+        // model
+        let numbers = [8, 3, 6, 2, 4];
+
         // view
         show();
         function show() {
@@ -30,13 +36,13 @@
                 <svg id="chart" width="500" viewBox="0 0 80 60">
                     ${svgInnerHtml}
                 </svg><br/>
-                Valgt stolpe: <i>ingen</i>
+                Valgt stolpe: <i>${valgtStolpe || 'Ingen valgt'}</i>
                 <br />
                 Verdi:
                 <input value="${barInputValue || ''}" oninput="barInputValue = this.value" type="number" min="1" max="10" />
                 <button onclick="crateNewBar()">Legg til stolpe</button>
-                <button disabled>Endre valgt stolpe</button><br />
-                <button disabled>Fjerne valgt stolpe</button>
+                <button ${state || 'disabled'} onclick="changeBar()" >Endre valgt stolpe</button><br />
+                <button ${state || 'disabled'} onclick="removeBar()">Fjerne valgt stolpe</button>
                 `;
         }
     
@@ -47,8 +53,9 @@
             let height = number * 10;
             let y = 60 - height;
             let color = calcColor(1, 10, barNo);
-            return `<rect class="svgBar" onclick="selectedBar(evt)" width="${width}" height="${height}"
-                    x="${x}" y="${y}" fill="${color}" stroke= ${border} stroke-width=".5" stroke-opacity="${border}"></rect>`;
+            let barStyleSheet = place == barNo ? 'stroke: black; stroke-width: 0.5;':'';
+            return `<rect  id= "bar${barNo}" onclick="selectedBar(evt,${number},${barNo})" width="${width}" height="${height}"
+                    x="${x}" y="${y}" fill="${color}" style="${barStyleSheet}"></rect>`;
         }
     
         function calcColor(min, max, val) {
@@ -60,21 +67,51 @@
     
         // controller (ingenting her ennå)
         function crateNewBar(){
+            if (barInputValue < 1 || barInputValue > 10) {return alert("Ugyldig verdi! Må være mellom 1 & 10")}
             numbers.push(barInputValue);
-            createBar(barInputValue, numbers.length);
+            createBar(barInputValue);
             barInputValue = '';
             show();
         }
 
-        function selectedBar(evt){
-            let svgobj=evt.target;
-            svgAll.innerHRML ="style = stroke: none";
-            // svgobj.style.stroke= "black";
-            border = "black";
-            console.log(selectedBar)
-            show()
+       function selectedBar(evt, number, barNo){
+            place = barNo;
+            
+            selectedBarTxt(barNo);
+            buttonState();
+            if (valgtStolpe === undefined){place = undefined};
 
+           show()
+       }
+       
+        function selectedBarTxt(barNo){
+            barLastClicked = barClicked;
+            barClicked= barNo;
+            if ((barClicked === barNo) && (barLastClicked === barClicked)) {
+                valgtStolpe = ('stolpe nr.' + barNo) &&(barClicked = undefined) && (barLastLastclicked = undefined)
+            }
+            else if (barNo == barLastClicked){valgtStolpe = undefined}
+            else {valgtStolpe = ('stolpe nr.' + barNo)}
         }
+        function buttonState(){
+            if (valgtStolpe != undefined) {state = 'enabled'}
+            else {state = undefined}
+        }
+
+        function changeBar(){
+            if (barInputValue < 1 || barInputValue > 10) {return alert("Ugyldig verdi! Må være mellom 1 & 10")}
+            numbers[place -1] = barInputValue;
+            barInputValue = '';
+            show()
+        }
+        
+        function removeBar(){
+            numbers.splice(place-1,1);
+            show();
+        }
+        
+        
+
     </script>
 </body>
 </html>
