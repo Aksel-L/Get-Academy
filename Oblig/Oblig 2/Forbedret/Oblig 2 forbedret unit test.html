@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>QUnit Example</title>
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.9.2.css">
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-2.9.2.js"></script>
+  <script src="Oblig 2 forbedret.js"></script>
+
+ 
+  <script>
+    function show() {}
+
+    let barInputValue;
+    let barPlacement;
+    let barNo;
+    
+    QUnit.test("Riktig plasering", function (assert) {
+            selectedBar(3);
+            assert.equal(barPlacement, 3);
+        });
+
+    QUnit.test("Riktig plasering med bytte", function (assert) {
+            selectedBar(3);
+            selectedBar(5);
+            assert.equal(barPlacement, 5);
+        });
+
+    QUnit.test("Trykket på samme bar 2 ganger", function (assert) {
+            selectedBar(3);
+            selectedBar(3);
+            assert.equal(barPlacement, undefined);
+        });
+
+    QUnit.test("Slette stolpe", function (assert) {
+            numbers = [8, 3, 6, 2, 4];
+            barPlacement = 3;
+            removeBar();
+            assert.deepEqual(numbers, [8, 3, 2, 4]);
+        });
+
+    QUnit.test("Endre stolpe", function (assert) {
+            numbers = [8, 3, 6, 2, 4];
+            barPlacement = 4;
+            barInputValue = 5;
+            changeBar()
+            assert.deepEqual(numbers, [8, 3, 6, 5, 4]);
+        });
+
+    QUnit.test("Legge til en stolpe", function (assert) {
+            numbers = [8, 3, 6, 2, 4];
+            barInputValue = 3;
+            createNewBar()
+            assert.deepEqual(numbers, [8, 3, 6, 2, 4, 3]);
+        });
+
+    QUnit.test("Legge til en stolpe med feil verdi", function (assert) {
+            numbers = [8, 3, 6, 2, 4];
+            barInputValue = 12;
+            createNewBar()
+            assert.deepEqual(numbers, [8, 3, 6, 2, 4]);
+        });
+
+    QUnit.test("Endre en stolpe med feil verdi", function (assert) {
+            numbers = [8, 3, 6, 2, 4];
+            barInputValue = 22;
+            barInputValue = 5;
+            changeBar()
+            assert.deepEqual(numbers, [8, 3, 6, 2, 4]);
+        });
+
+
+  </script>
+  
+</body>
+</html>
