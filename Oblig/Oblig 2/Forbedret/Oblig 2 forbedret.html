@@ -28,7 +28,6 @@
             let svgInnerHtml = '';
             let ButtonState = barPlacement !== barNo ? 'enabled':'disabled';
             let chosenBarTxt = barPlacement !== barNo ? 'stolpe nr.'+barPlacement:'ingen valgt';
-            const nonValidValue = (barInputValue < 1 || barInputValue > 10) ? alert("Ugyldig verdi! Må være mellom 1 & 10") : '';
             for (let i = 0; i < numbers.length; i++) {
                 svgInnerHtml += createBar(numbers[i], i + 1);
             }

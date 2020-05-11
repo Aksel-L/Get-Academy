@@ -4,14 +4,14 @@ function selectedBar(barNo){
 }
 
 function createNewBar(){
-    if (barInputValue < 1 || barInputValue > 10) {return}
+    if (barInputValue < 1 || barInputValue > 10) {return alert("Ugyldig verdi! Må være mellom 1 & 10")}
     numbers.push(barInputValue);
     barInputValue = '';
     show();
 }
 
 function changeBar(){
-    if (barInputValue < 1 || barInputValue > 10) {return}
+    if (barInputValue < 1 || barInputValue > 10) {return alert("Ugyldig verdi! Må være mellom 1 & 10")}
     numbers[barPlacement -1] = barInputValue;
     barInputValue = '';
     show()
