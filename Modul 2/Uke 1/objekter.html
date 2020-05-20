@@ -57,7 +57,7 @@ Oppgaver
     // Controller
     var taskDescriptionInput = document.getElementById('taskDescription');
     var taskPersonInput = document.getElementById('taskPerson');
-    const todaysDate = new Date();
+    let todaysDate = new Date();
 
     function addTask() {
         if (taskDescriptionInput.value !== '' && taskPersonInput.value !== '')
@@ -125,7 +125,8 @@ Oppgaver
 
     function changeIsDone(checkbox, index) {
         tasks[index].isDone = checkbox.checked;
-        tasks[index].dateDone = todaysDate.toLocaleDateString();
+        if (tasks[index].isDone){tasks[index].dateDone = todaysDate.toLocaleDateString();}
+        else {tasks[index].dateDone = 'Ikke gjort'}
         show();
     }
     function changeDate(newDate, index){
