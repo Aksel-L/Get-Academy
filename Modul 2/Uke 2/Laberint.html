@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+table {
+    border-spacing: 0;
+}
+td {
+    background-color: white;
+    padding: 0;
+}
+td.room {
+    width: 40px;
+    height: 40px;
+}
+td.wall {
+    background-color: black;
+}
+td.noWall {
+    background-color: white;
+}
+td.small {
+    width: 10px;
+    height: 10px;
+}
+td.wide {
+    width: 40px;
+}
+td.high {
+    height: 40px;
+}
+</style>
+<body>
+    <div id="maze"></div>
+    <script>
+
+        //model
+        var mazeModel = {
+    size: 3,
+    rows: [
+        [
+            { isHigh: false, isWide: false, isOpen: false },
+            { isHigh: false, isWide: true, isOpen: false },
+            { isHigh: false, isWide: false, isOpen: false },
+            { isHigh: false, isWide: true, isOpen: false },
+            { isHigh: false, isWide: false, isOpen: false },
+        ],
+        [
+            { isHigh: true, isWide: false, isOpen: false },
+            { isHigh: true, isWide: true, isOpen: false },
+            { isHigh: true, isWide: false, isOpen: false },
+            { isHigh: true, isWide: true, isOpen: false },
+            { isHigh: true, isWide: false, isOpen: false },
+        ],
+        [
+            { isHigh: false, isWide: false, isOpen: false },
+            { isHigh: false, isWide: true, isOpen: false },
+            { isHigh: false, isWide: false, isOpen: false },
+            { isHigh: false, isWide: true, isOpen: false },
+            { isHigh: false, isWide: false, isOpen: false },
+        ],
+        [
+            { isHigh: true, isWide: false, isOpen: false },
+            { isHigh: true, isWide: true, isOpen: false },
+            { isHigh: true, isWide: false, isOpen: false },
+            { isHigh: true, isWide: true, isOpen: false },
+            { isHigh: true, isWide: false, isOpen: false },
+        ],
+        [
+            { isHigh: false, isWide: false, isOpen: false },
+            { isHigh: false, isWide: true, isOpen: false },
+            { isHigh: false, isWide: false, isOpen: false },
+            { isHigh: false, isWide: true, isOpen: false },
+            { isHigh: false, isWide: false, isOpen: false },
+        ],
+    ]
+};
+
+        //view
+        var maze = document.getElementById('maze');
+        show();
+
+        function show(){
+            maze.innerHTML = mazeModel;
+}
+        //controller
+
+    </script>
+
+</body>
+</html>

@@ -15,7 +15,7 @@ function changeBar(){
     numbers[barPlacement -1] = barInputValue;
     barInputValue = '';
     show()
-}
+}x
 
 function removeBar(){
     numbers.splice(barPlacement-1,1);
