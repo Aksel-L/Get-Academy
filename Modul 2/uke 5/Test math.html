@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="test1" onclick="averageScore(1)">Test 1</button> <br>
+    <script>
+
+
+    let answers =   [
+        {testId: 1, userId: "1035", date: "2020-06-10", answers: Array(12)},
+        {testId: 1, userId: "1035", date: "2020-03-09", answers: Array(12)},
+        {testId: 1, userId: "1035", date: "2020-03-10", answers: Array(12)},
+        {testId: 3, userId: "1035", date: "2020-06-03", answers: Array(25)},
+        {testId: 5, userId: "1035", date: "2020-06-05", answers: Array(8)},
+        {testId: 2, userId: "1035", date: "2020-06-01", answers: Array(2)},
+        {testId: 3, userId: "1035", date: "2020-05-23", answers: Array(10)},
+        {testId: 1, userId: "1035", date: "2020-04-09", answers: Array(24)},
+        {testId: 6, userId: "1035", date: "2020-03-11", answers: Array(22)},
+        ];
+
+    
+    let categoryId = 1;
+    let arrByID = answers.filter(filterByID)
+
+    function filterByID(item) {
+            if (categoryId === item.testId) {
+              return true
+            } 
+          }
+            
+        arrByID.sort(function(a, b) {
+            var dateA = new Date(a.date), dateB = new Date(b.date);
+            return dateB - dateA;
+        });
+          
+        
+    
+    </script>
+
+</body>
+</html>

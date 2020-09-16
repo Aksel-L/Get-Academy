@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>QUnit Example</title>
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.9.2.css">
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-2.9.2.js"></script>
+  <script src="plan.js"></script>
+
+ 
+  <script>
+    function show() {}
+
+    let testUserScore;
+    let checkUserId;
+
+    
+    QUnit.test("test riktig id", function (assert) {
+        testUserScore = [
+            {testId: "søvn", score: "3", userID: "10435", date: "25.05.2020", },
+            {testId: "kosthold", score: "2", userID: '10425', date: "29.05.2020",  },
+            {testId: "økonomi", score: "4", userID: "10425", date: "15.05.2020", },
+        ]
+            checkUserId = '10425';
+            checkUser(1);
+            assert.equal(testId, true);
+        });
+
+    QUnit.test("test feil id", function (assert) {
+        testUserScore = [
+            {testId: "søvn", score: "3", userID: "10425", date: "25.05.2020", },
+            {testId: "kosthold", score: "2", userID: '10425', date: "29.05.2020",  },
+            {testId: "økonomi", score: "4", userID: "10425", date: "15.05.2020", },
+        ]
+            checkUserId = '1045';
+            checkUser(1);
+            assert.equal(testId, false);
+        });
+
+   
+
+
+  </script>
+  
+</body>
+</html>

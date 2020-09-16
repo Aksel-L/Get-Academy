@@ -1,0 +1,11 @@
+C:\Users\aksel\OneDrive\Dokumenter\Get-Academy\Modul 3\Uke 1\Test-dag1\Test-dag1\bin\Debug\netcoreapp3.1\Test-dag1.exe
+C:\Users\aksel\OneDrive\Dokumenter\Get-Academy\Modul 3\Uke 1\Test-dag1\Test-dag1\bin\Debug\netcoreapp3.1\Test-dag1.deps.json
+C:\Users\aksel\OneDrive\Dokumenter\Get-Academy\Modul 3\Uke 1\Test-dag1\Test-dag1\bin\Debug\netcoreapp3.1\Test-dag1.runtimeconfig.json
+C:\Users\aksel\OneDrive\Dokumenter\Get-Academy\Modul 3\Uke 1\Test-dag1\Test-dag1\bin\Debug\netcoreapp3.1\Test-dag1.runtimeconfig.dev.json
+C:\Users\aksel\OneDrive\Dokumenter\Get-Academy\Modul 3\Uke 1\Test-dag1\Test-dag1\bin\Debug\netcoreapp3.1\Test-dag1.dll
+C:\Users\aksel\OneDrive\Dokumenter\Get-Academy\Modul 3\Uke 1\Test-dag1\Test-dag1\bin\Debug\netcoreapp3.1\Test-dag1.pdb
+C:\Users\aksel\OneDrive\Dokumenter\Get-Academy\Modul 3\Uke 1\Test-dag1\Test-dag1\obj\Debug\netcoreapp3.1\Test-dag1.csprojAssemblyReference.cache
+C:\Users\aksel\OneDrive\Dokumenter\Get-Academy\Modul 3\Uke 1\Test-dag1\Test-dag1\obj\Debug\netcoreapp3.1\Test-dag1.AssemblyInfoInputs.cache
+C:\Users\aksel\OneDrive\Dokumenter\Get-Academy\Modul 3\Uke 1\Test-dag1\Test-dag1\obj\Debug\netcoreapp3.1\Test-dag1.AssemblyInfo.cs
+C:\Users\aksel\OneDrive\Dokumenter\Get-Academy\Modul 3\Uke 1\Test-dag1\Test-dag1\obj\Debug\netcoreapp3.1\Test-dag1.dll
+C:\Users\aksel\OneDrive\Dokumenter\Get-Academy\Modul 3\Uke 1\Test-dag1\Test-dag1\obj\Debug\netcoreapp3.1\Test-dag1.pdb

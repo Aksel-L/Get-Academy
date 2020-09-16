@@ -1,0 +1,11 @@
+C:\Users\aksel\OneDrive\Dokumenter\Get-Academy\Modul 3\Uke 1\oppgave 2\oppgave 2\bin\Debug\netcoreapp3.1\oppgave 2.exe
+C:\Users\aksel\OneDrive\Dokumenter\Get-Academy\Modul 3\Uke 1\oppgave 2\oppgave 2\bin\Debug\netcoreapp3.1\oppgave 2.deps.json
+C:\Users\aksel\OneDrive\Dokumenter\Get-Academy\Modul 3\Uke 1\oppgave 2\oppgave 2\bin\Debug\netcoreapp3.1\oppgave 2.runtimeconfig.json
+C:\Users\aksel\OneDrive\Dokumenter\Get-Academy\Modul 3\Uke 1\oppgave 2\oppgave 2\bin\Debug\netcoreapp3.1\oppgave 2.runtimeconfig.dev.json
+C:\Users\aksel\OneDrive\Dokumenter\Get-Academy\Modul 3\Uke 1\oppgave 2\oppgave 2\bin\Debug\netcoreapp3.1\oppgave 2.dll
+C:\Users\aksel\OneDrive\Dokumenter\Get-Academy\Modul 3\Uke 1\oppgave 2\oppgave 2\bin\Debug\netcoreapp3.1\oppgave 2.pdb
+C:\Users\aksel\OneDrive\Dokumenter\Get-Academy\Modul 3\Uke 1\oppgave 2\oppgave 2\obj\Debug\netcoreapp3.1\oppgave 2.csprojAssemblyReference.cache
+C:\Users\aksel\OneDrive\Dokumenter\Get-Academy\Modul 3\Uke 1\oppgave 2\oppgave 2\obj\Debug\netcoreapp3.1\oppgave 2.AssemblyInfoInputs.cache
+C:\Users\aksel\OneDrive\Dokumenter\Get-Academy\Modul 3\Uke 1\oppgave 2\oppgave 2\obj\Debug\netcoreapp3.1\oppgave 2.AssemblyInfo.cs
+C:\Users\aksel\OneDrive\Dokumenter\Get-Academy\Modul 3\Uke 1\oppgave 2\oppgave 2\obj\Debug\netcoreapp3.1\oppgave 2.dll
+C:\Users\aksel\OneDrive\Dokumenter\Get-Academy\Modul 3\Uke 1\oppgave 2\oppgave 2\obj\Debug\netcoreapp3.1\oppgave 2.pdb

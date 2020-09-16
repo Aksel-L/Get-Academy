@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="tasksTable"></table>
+
+    <script>
+
+var tasksTable = document.getElementById('tasksTable');
+    show();
+
+    function show() {
+        let html = `
+                        <tr>
+                                
+                            <th>Oppgave</th>
+                            <th>Gjort</th>
+                            <th>Dato ferdig</th>
+                            <th>Frist</th>
+                            <th></th>
+                            <th></th>
+                            </tr>`;
+        
+        tasksTable.innerHTML = html;
+    }
+
+    </script>
+</body>
+</html>

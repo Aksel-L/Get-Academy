@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        
+    <script src="plan.js"></script>
+    
+    <h1>Ukes plan</h1>
+        <p>Sett opp uken din og prøv og gjennomfør alle oppgavene</p>
+        <div id="PlanContent">
+
+           
+            <ul id="plan-list"></ul>
+        </div>
+
+
+    <script>
+        var testUserScore = [
+            //Deler på antall spørsmål for å få en snitt score
+            {testId: "søvn", score: "3", userID: "10425", date: "25.05.2020", },
+            {testId: "kosthold", score: "2", userID: "10425", date: "29.05.2020",  },
+            {testId: "økonomi", score: "4", userID: "10425", date: "15.05.2020", },
+        ]
+        var weekPlan = [
+        søvn =[
+            {plan:'Re sengen', score: 1},
+            {plan:'Legge deg 23.00', score: 3},
+            {plan:'Våkne en bestemt tid hver dag', score: 3},
+            {plan:'Våkne 08.00', score: 5},
+        ],
+        kosthold =[
+            {plan:'', score: ''}
+        ],
+        fysiskeAktivitet =[
+            {plan:'', score: ''}
+        ],
+        sosialeAktivitet =[
+            {plan:'', score: ''}
+        ],
+        økonomi =[
+            {plan:'', score: ''}
+        ],
+        karrierveiledningOgUtdanningsvalg =[
+            {plan:'', score: ''}
+        ],
+        ]
+
+
+        var planContent = document.getElementById('planContent');
+        show();
+        const checkUserId = '10425';
+        
+    </script>
+</body>
+</html>
